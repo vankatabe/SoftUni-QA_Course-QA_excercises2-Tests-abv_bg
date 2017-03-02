@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by vankatabe on 21-Feb-17.
  * Tests abv.bg.
+ * For Tests scenarios description please read README.md in the root folder of the project
  * Credentials and Variables must be filled-in before running the test!
  */
 public class Test_abv_bg {
