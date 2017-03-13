@@ -7,7 +7,9 @@
 ID:	1
 Long ID:	testLogin_validCredentials_expectedNavigationToWebmailHomepage
 Title:	Login to homepage
-Pre-conditions:	Valid user account
+Pre-conditions:
+1. Valid user account
+2. User not logged in
 
 Test steps:
 1. Open in browser abv.bg
@@ -22,6 +24,7 @@ Title:	Greeting user on homepage
 Pre-conditions:
 1. Valid user account
 2. User's 'Username' field is populated
+3. User not logged in
 Test steps:
 1. Open in browser abv.bg
 2. Enter username (email) and password
