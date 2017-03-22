@@ -1,0 +1,43 @@
+#Tests for Tests-abv_bg
+
+##Feature : User should be able to login and use their web-based email account
+
+###Test Suite: User login
+
+Scenario ID:	1
+Long ID:	testLogin_validCredentials_expectedNavigationToWebmailHomepage
+Title:	Login to homepage
+Given that I have a valid user account
+When I Open in browser abv.bg
+And Enter my email and password
+And Click 'Login'
+Then Opens homepage (Logged-in URL = https://nm70.abv.bg/Mail.html)
+Note: The logged-in URL may change after some time to e.g. nm80.*)
+
+Scenarion ID:	2
+Long ID:	testLogin_validCredentials_expectedDisplayUsernameAfterGreeting
+Title:	Greeting user on homepage
+Given that I have a valid user account
+When I Open in browser abv.bg
+And Enter my email and password
+And Click 'Login'
+Then I should be greeted by my Username
+
+
+###Test Suite: Send and receive emails
+
+Scenario ID:	3
+Long ID:	TestSendMail_AllRequiredFieldsPopulated_ShouldSendAndReceiveCorrectly
+Title:	Send and receive email
+Given that I have a valid user account
+And I am logged in
+When I Click 'Compose'
+And Into 'To' field type my user's email address
+And Into 'Subject' type a dummy subject such as "Test mail sending Selenium"
+And Into 'email body' type dummy body e.g. "Test body of the test mail"
+And Click 'Send'
+Then I should receive a new email in 'Inbox' from my email address, containing the dummy 'Subject'
+And The number of emails in my 'Inbox' should increase by 1
+
+
+
