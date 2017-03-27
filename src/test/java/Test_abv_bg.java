@@ -35,7 +35,7 @@ public class Test_abv_bg {
     private static final String VC_PASSWORD = " "; // your version control website password
 
     //Path to Firefox Selenium driver on your machine
-    private static final String LOCAL_PATH_TO_SELENIUM_DRIVER = "C:\\Users\\vaneto\\IdeaProjects\\SoftUni-QA_Course-QA_excercises2-Tests-abv_bg";
+    private static final String LOCAL_PATH_TO_SELENIUM_DRIVER = "C:\\Users\\vaneto\\Documents\\QA\\geckodriver-v0.15.0-win64\\geckodriver.exe";
     private String loginIssueTitleString = "Login functionality does not work";
 
     @Before
@@ -188,7 +188,7 @@ public class Test_abv_bg {
 
     @After
     public void TearDown() {
-        //this.driver.quit();
+        this.driver.quit();
     }
 
 }
